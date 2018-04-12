@@ -1,0 +1,10 @@
+{
+  "name": "@backmarket/modal",
+  "version": "0.0.0",
+  "peerDependencies": {
+    "vue": "^2.5.16"
+  },
+  "dependencies": {
+    "portal-vue": "^1.3.0"
+  }
+}

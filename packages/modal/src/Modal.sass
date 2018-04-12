@@ -1,0 +1,131 @@
+//////////////////////////////////////////
+//              Variables
+//////////////////////////////////////////
+
+$white: white
+$grey: #333333
+$black: black
+
+$over-sm: 'screen and (min-width: 768px)'
+$over-md: 'screen and (min-width: 992px)'
+$over-lg: 'screen and (min-width: 1200px)'
+
+$spacing: 2rem
+
+$topbar-spacing: 1rem
+$topbar-height: 3.4rem
+
+//////////////////////////////////////////
+//                Mixins
+//////////////////////////////////////////
+
+=center()
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=desktop-window($width)
+  +center
+  height: auto
+  width: $width
+
+  .Modal__Topbar:not(.Modal__Topbar--sticky)
+    position: relative
+    padding: 0
+    box-shadow: none
+    background: transparent
+
+  .Modal__Content
+    padding-top: $spacing
+    flex: none
+    border-radius: 0.2rem
+
+  .Modal__Topbar--sticky
+    width: $width
+
+  .Modal__Topbar--sticky ~ .Modal__Content
+    padding-top: calc(#{$spacing} + #{$topbar-height})
+
+//////////////////////////////////////////
+//               Elements
+//////////////////////////////////////////
+
+.Modal,
+.Modal__Backdrop,
+.Modal__Window
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+
+.Modal
+  overflow: scroll
+
+.Modal__Backdrop
+  background: rgba($black, 0.4)
+  z-index: 1
+
+.Modal__Window
+  display: flex
+  flex-direction: column
+  overflow: scroll
+  z-index: 2
+
+.Modal__Topbar
+  position: fixed
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  flex: none
+  top: 0
+  height: $topbar-height
+  width: 100%
+  padding: 0 $topbar-spacing
+  color: $white
+  background: $grey
+  box-shadow: 0 0.2rem 0.3rem 0 rgba($black, 0.5)
+  transition: padding .2s ease
+  z-index: 1
+
+.Modal__Content
+  flex: 1
+  padding: $spacing
+  padding-top: calc(#{$spacing} + #{$topbar-height})
+  background: $white
+
+//////////////////////////////////////////
+//              Variants
+//////////////////////////////////////////
+
+@media #{$over-sm}
+  .Modal__Window--small
+    +desktop-window(48rem)
+  .Modal__Window--medium
+    +desktop-window(66rem)
+
+.Modal__Window--large
+  @media #{$over-md}
+    +desktop-window(96rem)
+  @media #{$over-lg}
+    +desktop-window(117rem)
+
+.Modal__Window--scrollable
+  position: relative
+  margin: 5rem auto
+  transform: initial
+  top: initial
+  left: initial
+
+//////////////////////////////////////////
+//          Not related stuff
+//////////////////////////////////////////
+
+.Button--reset
+  font-size: 1.4rem
+  border: none
+  background: none
+  text-transform: uppercase
+  font-weight: bold
+  color: inherit
