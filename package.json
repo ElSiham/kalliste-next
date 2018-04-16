@@ -3,7 +3,8 @@
   "scripts": {
     "test": "vue-cli-service test",
     "lint": "vue-cli-service lint",
-    "styleguide": "vue-styleguidist server"
+    "styleguide": "vue-styleguidist server",
+    "generate": "hygen package new"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
@@ -14,6 +15,7 @@
     "@vue/test-utils": "^1.0.0-beta.10",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^22.0.4",
+    "hygen": "^1.5.8",
     "lerna": "^2.9.1",
     "lint-staged": "^6.0.0",
     "node-sass": "^4.8.3",
@@ -30,9 +32,6 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "*.{js,vue}": ["vue-cli-service lint", "git add"]
   }
 }
