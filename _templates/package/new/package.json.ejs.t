@@ -12,5 +12,8 @@ sh: cd packages/<%= name %> && npm install
   },
   "peerDependencies": {
     "vue": "^2.5.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
