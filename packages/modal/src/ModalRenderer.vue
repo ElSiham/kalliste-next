@@ -37,7 +37,7 @@
 
 <script>
 import Event from '@backmarket/event'
-import SizeMe from './SizeMe.vue'
+import SizeMe from '@backmarket/size-me'
 import Sticky from '@backmarket/sticky'
 import Plugin from './plugin'
 

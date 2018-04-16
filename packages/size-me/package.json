@@ -1,5 +1,5 @@
 {
-  "name": "@backmarket/modal",
+  "name": "@backmarket/size-me",
   "version": "0.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -8,11 +8,5 @@
   },
   "peerDependencies": {
     "vue": "^2.5.16"
-  },
-  "dependencies": {
-    "@backmarket/event": "^0.0.0",
-    "@backmarket/size-me": "^0.0.0",
-    "@backmarket/sticky": "^0.0.0",
-    "portal-vue": "^1.3.0"
   }
 }
