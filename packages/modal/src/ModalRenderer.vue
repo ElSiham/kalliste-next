@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import Event from './Event.vue'
+import Event from '@backmarket/event'
 import SizeMe from './SizeMe.vue'
 import Sticky from '@backmarket/sticky'
 import Plugin from './plugin'
