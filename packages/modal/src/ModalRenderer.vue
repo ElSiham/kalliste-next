@@ -36,9 +36,8 @@
 </template>
 
 <script>
-import { Portal } from 'portal-vue'
-import Event from './Event'
-import SizeMe from './SizeMe'
+import Event from './Event.vue'
+import SizeMe from './SizeMe.vue'
 import Sticky from '@backmarket/sticky'
 import Plugin from './plugin'
 
@@ -48,7 +47,6 @@ export default {
   name: 'ModalRenderer',
   components: {
     Event,
-    Portal,
     SizeMe,
     Sticky,
   },
@@ -94,4 +92,6 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped src="./Modal.sass" />
+<style lang="sass" scoped>
+  @import './Modal.sass'
+</style>

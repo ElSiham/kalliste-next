@@ -9,14 +9,10 @@
 </template>
 
 <script>
-import { PortalTarget } from 'portal-vue'
 import Plugin from './plugin'
 
 export default {
   name: 'ModalTarget',
-  components: {
-    PortalTarget,
-  },
   data() {
     return {
       modals: [],

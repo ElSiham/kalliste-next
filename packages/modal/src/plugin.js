@@ -1,5 +1,9 @@
+import PortalVue from 'portal-vue'
+
 const Plugin = {
   install(Vue) {
+    Vue.use(PortalVue)
+
     Plugin.target = null
     Plugin.event = new Vue()
 

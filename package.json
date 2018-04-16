@@ -17,9 +17,14 @@
     "lerna": "^2.9.1",
     "lint-staged": "^6.0.0",
     "node-sass": "^4.8.3",
+    "rollup": "^0.57.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-vue": "^3.0.0",
     "sass-loader": "^6.0.7",
     "vue": "^2.5.16",
-    "vue-styleguidist": "^1.7.3"
+    "vue-styleguidist": "^1.7.3",
+    "vue-template-compiler": "^2.5.16"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

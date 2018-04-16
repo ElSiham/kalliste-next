@@ -1,9 +1,10 @@
 {
   "name": "@backmarket/modal",
   "version": "0.0.0",
-  "main": "dist/modal.umd.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "../../node_modules/.bin/vue-cli-service build --target='lib' --name='modal' src/index.js"
+    "build": "../../node_modules/.bin/rollup -c ../../rollup.config.js",
+    "watch": "npm run build -- --watch"
   },
   "peerDependencies": {
     "vue": "^2.5.16"
