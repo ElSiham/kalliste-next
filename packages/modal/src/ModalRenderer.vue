@@ -39,7 +39,7 @@
 import { Portal } from 'portal-vue'
 import Event from './Event'
 import SizeMe from './SizeMe'
-import Sticky from './Sticky'
+import Sticky from '@backmarket/sticky'
 import Plugin from './plugin'
 
 const sizes = ['small', 'medium', 'large']

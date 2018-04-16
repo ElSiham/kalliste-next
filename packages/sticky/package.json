@@ -1,0 +1,15 @@
+{
+  "name": "@backmarket/sticky",
+  "version": "0.0.0",
+  "main": "dist/sticky.umd.js",
+  "scripts": {
+    "build:parcel": "parcel build src/index.js",
+    "build": "../../node_modules/.bin/vue-cli-service build --target='lib' --name='sticky' src/index.js"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.16"
+  },
+  "dependencies": {
+    "portal-vue": "^1.3.0"
+  }
+}
