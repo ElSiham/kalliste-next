@@ -34,3 +34,13 @@ export default {
   },
 }
 </script>
+
+<docs>
+```vue
+<size-me>
+  <div slot-scope="{ height, width }">
+    My width is {{ width }}, and my height is {{ height }}.
+  </div>
+</size-me>
+```
+</docs>
