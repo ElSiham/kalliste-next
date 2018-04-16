@@ -1,5 +1,5 @@
 ---
-to: packages/<%= name %>/src/<%= Name %>.vue
+to: packages/<%= name %>/src/<%= h.inflection.camelize(name.replace('-', '_')) %>.vue
 ---
 <template>
   <div>
@@ -9,7 +9,7 @@ to: packages/<%= name %>/src/<%= Name %>.vue
 
 <script>
 export default {
-  name: '<%= Name %>',
+  name: '<%= h.inflection.camelize(name.replace('-', '_')) %>',
   props: {
     /**
      * The holy message

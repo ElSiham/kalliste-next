@@ -1,13 +1,8 @@
-module.exports = {
-  prompt: ({ inquirer, args: { name } }) => {
-    if (name) {
-      return
-    }
-
-    return inquirer.prompt({
-      type: 'input',
-      name: 'name',
-      message: "What's the package name ?",
-    })
+module.exports = [
+  {
+    type: 'input',
+    name: 'name',
+    message: "What's the package name ?",
+    validate: value => value.length !== 0,
   },
-}
+]
