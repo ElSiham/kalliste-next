@@ -53,3 +53,13 @@ export default {
   },
 }
 </script>
+
+<docs>
+```vue
+<event on="resize" :listener="window => window.innerHeight">
+  <div slot-scope="{ result }">
+    The window height is {{ result }}.
+  </div>
+</event>
+```
+</docs>

@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'Sticky',
   props: {
     /**
      * A function resolving to the parent element.

@@ -22,9 +22,27 @@ export default {
     ModalRenderer,
   },
   props: {
-    closeLabel: ModalListener.props.closeLabel,
-    name: ModalListener.props.name,
-    size: ModalListener.props.size,
+    /**
+     * The close button label
+     */
+    closeLabel: {
+      type: String,
+      required: true,
+    },
+    /**
+     * The modal name
+     */
+    name: {
+      type: String,
+      required: true,
+    },
+    /**
+     * The modal size
+     */
+    size: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
