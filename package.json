@@ -1,10 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "test": "vue-cli-service test",
-    "lint": "vue-cli-service lint",
     "styleguide": "vue-styleguidist server",
-    "generate": "hygen package new"
+    "generate": "hygen package new",
+    "publish": "lerna publish --conventional-commits"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
