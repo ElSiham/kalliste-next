@@ -8,7 +8,8 @@ sh: cd packages/<%= name %> && npm install
   "main": "dist/index.js",
   "scripts": {
     "build": "../../node_modules/.bin/rollup -c ../../rollup.config.js",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "prepublish": "npm run build"
   },
   "peerDependencies": {
     "vue": "^2.5.16"
