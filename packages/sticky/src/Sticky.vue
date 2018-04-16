@@ -56,3 +56,15 @@ export default {
   },
 }
 </script>
+
+<docs>
+```vue
+<div>
+  <sticky>
+    <div slot-scope="{ sticky }">
+      Am I sticky ? {{ sticky ? 'Yes' : 'No' }}
+    </div>
+  </sticky>
+</div>
+```
+</docs>
