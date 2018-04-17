@@ -1,1 +1,1 @@
-export { default } from './Event.vue'
+export { default as Event } from './Event.vue'

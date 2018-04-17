@@ -1,1 +1,1 @@
-export { default } from './SizeMe.vue'
+export { default as SizeMe } from './SizeMe.vue'

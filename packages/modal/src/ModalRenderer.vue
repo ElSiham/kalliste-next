@@ -36,9 +36,9 @@
 </template>
 
 <script>
-import Event from '@backmarket/event'
-import SizeMe from '@backmarket/size-me'
-import Sticky from '@backmarket/sticky'
+import { Event } from '@backmarket/event'
+import { SizeMe } from '@backmarket/size-me'
+import { Sticky } from '@backmarket/sticky'
 import Plugin from './plugin'
 
 const sizes = ['small', 'medium', 'large']
@@ -92,6 +92,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-  @import './Modal.sass'
-</style>
+<style lang="sass" scoped src="./Modal.sass" />

@@ -7,7 +7,7 @@ sh: cd packages/<%= name %> && npm install
   "version": "0.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "../../node_modules/.bin/rollup -c ../../rollup.config.js",
+    "build": "../../node_modules/.bin/webpack --config ../../webpack.config.js --progress --hide-modules",
     "watch": "npm run build -- --watch",
     "prepublish": "npm run build"
   },

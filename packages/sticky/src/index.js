@@ -1,1 +1,1 @@
-export { default } from './Sticky.vue'
+export { default as Sticky } from './Sticky.vue'
