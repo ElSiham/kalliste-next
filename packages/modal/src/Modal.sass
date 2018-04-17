@@ -31,6 +31,14 @@ $topbar-height: 3.4rem
   .Modal__Topbar--sticky ~ .Modal__Content
     padding-top: calc(#{$spacing} + #{$topbar-height})
 
+  &.Animation--Window-enter-active,
+  &.Animation--Window-leave-active
+    transition: all 0.3s
+
+  &.Animation--Window-enter,
+  &.Animation--Window-leave-active
+    transform: translate(-50%, calc(-50% - 2rem))
+
 //////////////////////////////////////////
 //               Elements
 //////////////////////////////////////////
@@ -101,6 +109,14 @@ $topbar-height: 3.4rem
   transform: initial
   top: initial
   left: initial
+
+.Animation--Backdrop-enter-active,
+.Animation--Backdrop-leave-active
+  transition: all 0.2s
+
+.Animation--Backdrop-enter,
+.Animation--Backdrop-leave-active
+  opacity: 0
 
 //////////////////////////////////////////
 //          Not related stuff

@@ -1,36 +1,40 @@
 <template>
   <portal :to="name">
     <div class="Modal" ref="container">
-      <div class="Modal__Backdrop" @click="close" />
-      <event on="resize" :listener="window => window.innerHeight">
-        <size-me slot-scope="{ result: windowHeight }">
-          <div 
-            slot-scope="{ height }"
-            :class="[ 'Modal__Window', {
-              'Modal__Window--small': size === 'small',
-              'Modal__Window--medium': size === 'medium',
-              'Modal__Window--large': size === 'large',
-              'Modal__Window--scrollable': height > windowHeight,
-            } ]"
-          >
-            <sticky :scroller="() => $refs.container">
-              <div 
-                slot-scope="{ sticky }" 
-                :class="[ 'Modal__Topbar', { 
-                  'Modal__Topbar--sticky': sticky 
-                } ]"
-              >
-                <button class="Button--reset" @click="close">
-                  {{ closeLabel }}
-                </button>
+      <transition appear name="Animation--Backdrop">
+        <div class="Modal__Backdrop" @click="close" />
+      </transition>
+      <transition appear name="Animation--Window">
+        <event on="resize" :listener="window => window.innerHeight">
+          <size-me slot-scope="{ result: windowHeight }">
+            <div 
+              slot-scope="{ height }"
+              :class="[ 'Modal__Window', {
+                'Modal__Window--small': size === 'small',
+                'Modal__Window--medium': size === 'medium',
+                'Modal__Window--large': size === 'large',
+                'Modal__Window--scrollable': height > windowHeight,
+              } ]"
+            >
+              <sticky :scroller="() => $refs.container">
+                <div 
+                  slot-scope="{ sticky }" 
+                  :class="[ 'Modal__Topbar', { 
+                    'Modal__Topbar--sticky': sticky 
+                  } ]"
+                >
+                  <button class="Button--reset" @click="close">
+                    {{ closeLabel }}
+                  </button>
+                </div>
+              </sticky>
+              <div class="Modal__Content">
+                <slot />
               </div>
-            </sticky>
-            <div class="Modal__Content">
-              <slot />
             </div>
-          </div>
-        </size-me>
-      </event>
+          </size-me>
+        </event>
+      </transition>
     </div>
   </portal>
 </template>
@@ -92,4 +96,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped src="./Modal.sass" />
+<style lang="sass" src="./Modal.sass" />
