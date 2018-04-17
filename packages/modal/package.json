@@ -1,6 +1,6 @@
 {
   "name": "@backmarket/modal",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "../../node_modules/.bin/rollup -c ../../rollup.config.js",
@@ -11,9 +11,9 @@
     "vue": "^2.5.16"
   },
   "dependencies": {
-    "@backmarket/event": "^0.1.1",
-    "@backmarket/size-me": "^0.1.1",
-    "@backmarket/sticky": "^0.1.1",
+    "@backmarket/event": "^0.2.0",
+    "@backmarket/size-me": "^0.2.0",
+    "@backmarket/sticky": "^0.2.0",
     "portal-vue": "^1.3.0"
   },
   "publishConfig": {
