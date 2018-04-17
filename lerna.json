@@ -3,9 +3,13 @@
   "packages": ["packages/*"],
   "version": "independent",
   "command": {
+    "run": {
+      "ignore": "demo"
+    },
     "publish": {
       "allowBranch": "master",
-      "message": "chore(release): Publish"
+      "message": "chore(release): Publish",
+      "ignore": "demo"
     }
   }
 }
