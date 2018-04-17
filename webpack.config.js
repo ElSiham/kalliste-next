@@ -22,7 +22,20 @@ module.exports = {
         options: {
           loaders: {
             js: 'babel-loader',
-            sass: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'],
+            sass: [
+              { loader: 'vue-style-loader' },
+              { loader: 'css-loader' },
+              { loader: 'sass-loader?indentedSyntax' },
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  resources: [
+                    path.resolve(__dirname, 'common/styles/variables.sass'),
+                    path.resolve(__dirname, 'common/styles/mixins.sass'),
+                  ],
+                },
+              },
+            ],
           },
         },
       },
