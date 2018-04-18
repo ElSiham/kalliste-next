@@ -1,0 +1,36 @@
+.Button 
+  font-size: inherit
+  font-family: inherit
+  border: none
+  background: none
+  cursor: pointer
+
+.Button--default,
+.Button--primary,
+.Button--secondary
+  display: block
+  height: 4.4rem
+  width: 100%
+  padding: 0 1.5rem
+  background: $white
+  border: 1px solid currentColor
+  border-radius: 0.2rem
+  transition: all 0.3s ease
+
+.Button--primary,
+.Button--secondary
+  color: $white
+
+.Button--primary
+  background: $primary
+  border-color: $primary
+  &:hover
+    border-color: $primary-lighter
+    background: $primary-lighter
+
+.Button--secondary
+  background: $secondary
+  border-color: $secondary
+  &:hover
+    border-color: $secondary-lighter
+    background: $secondary-lighter
