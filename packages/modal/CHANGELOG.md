@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.3"></a>
+## [0.2.3](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.2...@backmarket/modal@0.2.3) (2018-04-18)
+
+
+### Bug Fixes
+
+* **modal:** Set a bigger z-index ([62ad385](https://github.com/antoinerey/kalliste-next/commit/62ad385))
+
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.1...@backmarket/modal@0.2.2) (2018-04-18)
 

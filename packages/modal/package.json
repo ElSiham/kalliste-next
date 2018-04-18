@@ -1,6 +1,6 @@
 {
   "name": "@backmarket/modal",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "dist/index.js",
   "scripts": {
     "build": "../../node_modules/.bin/webpack --config ../../webpack.config.js --progress --hide-modules",
