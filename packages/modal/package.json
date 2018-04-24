@@ -1,6 +1,6 @@
 {
   "name": "@backmarket/modal",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "dist/index.js",
   "scripts": {
     "build": "../../node_modules/.bin/webpack --config ../../webpack.config.js --progress --hide-modules",
@@ -11,7 +11,7 @@
     "vue": "^2.5.16"
   },
   "dependencies": {
-    "@backmarket/event": "^0.2.1",
+    "@backmarket/event": "^0.2.2",
     "@backmarket/size-me": "^0.2.1",
     "@backmarket/sticky": "^0.2.1",
     "portal-vue": "^1.3.0"

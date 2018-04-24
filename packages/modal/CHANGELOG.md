@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.3...@backmarket/modal@0.2.4) (2018-04-24)
+
+
+### Bug Fixes
+
+* **modals:** Fix the duplicate slot default warning ([0741fe0](https://github.com/antoinerey/kalliste-next/commit/0741fe0))
+
+
+
+
 <a name="0.2.3"></a>
 ## [0.2.3](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.2...@backmarket/modal@0.2.3) (2018-04-18)
 
