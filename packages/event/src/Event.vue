@@ -6,7 +6,7 @@ export default {
      * The event type.
      * Can be 'scroll', 'resize', 'click'…
      */
-    on: {
+    type: {
       type: String,
       required: true,
     },
@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted() {
-    this.target().addEventListener(this.on, this.handleEvent)
+    this.target().addEventListener(this.type, this.handleEvent)
   },
   methods: {
     handleEvent() {
@@ -44,7 +44,7 @@ export default {
     },
   },
   beforeDestroy() {
-    this.target().removeEventListener(this.on, this.handleEvent)
+    this.target().removeEventListener(this.type, this.handleEvent)
   },
   render() {
     return this.$scopedSlots.default({
@@ -56,7 +56,7 @@ export default {
 
 <docs>
 ```vue
-<event on="resize" :listener="window => window.innerHeight">
+<event type="resize" :listener="window => window.innerHeight">
   <div slot-scope="{ result }">
     The window height is {{ result }}.
   </div>

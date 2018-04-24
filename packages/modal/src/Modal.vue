@@ -1,16 +1,3 @@
-<template>
-  <modal-listener v-bind="$props">
-    <modal-renderer 
-      slot-scope="{ active, close }" 
-      v-if="active" 
-      v-bind="$props" 
-      :close="close"
-    >
-      <slot />
-    </modal-renderer>
-  </modal-listener>
-</template>
-
 <script>
 import ModalListener from './ModalListener.vue'
 import ModalRenderer from './ModalRenderer.vue'
@@ -43,6 +30,33 @@ export default {
       type: String,
       required: true,
     },
+  },
+  render() {
+    // <template>
+    //   <modal-listener v-bind="$props">
+    //     <modal-renderer
+    //       slot-scope="{ active, close }"
+    //       v-if="active"
+    //       v-bind="$props"
+    //       :close="close"
+    //     >
+    //       <slot />
+    //     </modal-renderer>
+    //   </modal-listener>
+    // </template>
+    return (
+      <ModalListener
+        name={this.name}
+        scopedSlots={{
+          default: ({ active, close }) =>
+            active && (
+              <ModalRenderer {...{ props: this.$props }} close={close}>
+                {this.$slots.default}
+              </ModalRenderer>
+            ),
+        }}
+      />
+    )
   },
 }
 </script>
