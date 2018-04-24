@@ -90,7 +90,7 @@ export default {
     // </template>
 
     return (
-      <portal to={this.name}>
+      <portal to="modal">
         <div class="Modal" ref="container">
           <transition appear name="Animation--Backdrop">
             <div class="Modal__Backdrop" onClick={this.close} />

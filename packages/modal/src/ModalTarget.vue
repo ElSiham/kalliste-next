@@ -1,11 +1,5 @@
 <template>
-  <div>
-    <portal-target
-      v-for="modal in modals"
-      :key="modal"
-      :name="modal"
-    />
-  </div>
+  <portal-target multiple name="modal" />
 </template>
 
 <script>
