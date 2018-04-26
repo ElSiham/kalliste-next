@@ -44,9 +44,13 @@ export default {
     active: {
       immediate: true,
       handler(value) {
-        value
-          ? window.addEventListener('keydown', this.handleEscape)
-          : window.removeEventListener('keydown', this.handleEscape)
+        if (value) {
+          window.document.body.style.overflow = 'hidden'
+          window.addEventListener('keydown', this.handleEscape)
+        } else {
+          window.document.body.style.overflow = ''
+          window.removeEventListener('keydown', this.handleEscape)
+        }
       },
     },
   },
