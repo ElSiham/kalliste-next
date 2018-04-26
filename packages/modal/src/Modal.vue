@@ -30,20 +30,16 @@ export default {
       type: String,
       required: true,
     },
+    /**
+     * Render the modal in place instead of using 'portal-vue'
+     * @deprecated
+     */
+    __dangerouslyRenderInPlace: {
+      type: Boolean,
+      default: false,
+    },
   },
   render() {
-    // <template>
-    //   <modal-listener v-bind="$props">
-    //     <modal-renderer
-    //       slot-scope="{ active, close }"
-    //       v-if="active"
-    //       v-bind="$props"
-    //       :close="close"
-    //     >
-    //       <slot />
-    //     </modal-renderer>
-    //   </modal-listener>
-    // </template>
     return (
       <ModalListener
         name={this.name}

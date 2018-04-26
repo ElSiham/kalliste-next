@@ -40,6 +40,14 @@ export default {
         return sizes.includes(size)
       },
     },
+    /**
+     * Render the modal in place instead of using 'portal-vue'
+     * @deprecated
+     */
+    __dangerouslyRenderInPlace: {
+      type: Boolean,
+      default: false,
+    },
   },
   created() {
     Plugin.target.add({ name: this.name })
@@ -48,49 +56,10 @@ export default {
     Plugin.target.remove({ name: this.name })
   },
   render() {
-    // <template>
-    //   <portal :to="name">
-    //     <div class="Modal" ref="container">
-    //       <transition appear name="Animation--Backdrop">
-    //         <div class="Modal__Backdrop" @click="close" />
-    //       </transition>
-    //       <transition appear name="Animation--Window">
-    //         <event on="resize" :listener="window => window.innerHeight">
-    //           <size-me slot-scope="{ result: windowHeight }">
-    //             <div
-    //               slot-scope="{ height }"
-    //               :class="[ 'Modal__Window', {
-    //                 'Modal__Window--small': size === 'small',
-    //                 'Modal__Window--medium': size === 'medium',
-    //                 'Modal__Window--large': size === 'large',
-    //                 'Modal__Window--scrollable': height > windowHeight,
-    //               } ]"
-    //             >
-    //               <sticky :scroller="() => $refs.container">
-    //                 <div
-    //                   slot-scope="{ sticky }"
-    //                   :class="[ 'Modal__Topbar', {
-    //                     'Modal__Topbar--sticky': sticky
-    //                   } ]"
-    //                 >
-    //                   <button class="Button--reset" @click="close">
-    //                     {{ closeLabel }}
-    //                   </button>
-    //                 </div>
-    //               </sticky>
-    //               <div class="Modal__Content">
-    //                 <slot />
-    //               </div>
-    //             </div>
-    //           </size-me>
-    //         </event>
-    //       </transition>
-    //     </div>
-    //   </portal>
-    // </template>
+    const Container = this.__dangerouslyRenderInPlace ? 'div' : 'portal'
 
     return (
-      <portal to="modal">
+      <Container to="modal">
         <div class="Modal" ref="container">
           <transition appear name="Animation--Backdrop">
             <div class="Modal__Backdrop" onClick={this.close} />
@@ -144,7 +113,7 @@ export default {
             />
           </transition>
         </div>
-      </portal>
+      </Container>
     )
   },
 }
