@@ -4,7 +4,7 @@
     "styleguide": "vue-styleguidist server",
     "generate": "hygen package new",
     "publish": "lerna publish --conventional-commits",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "dev": "start-storybook -p 9001 -c .storybook"
   },
   "devDependencies": {
     "@storybook/vue": "^4.0.0-alpha.3",
