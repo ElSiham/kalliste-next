@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.2.6"></a>
+## [0.2.6](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.5...@backmarket/modal@0.2.6) (2018-04-26)
+
+
+### Bug Fixes
+
+* **modal:** Prevent the body scroll when the modal is open ([9972d87](https://github.com/antoinerey/kalliste-next/commit/9972d87))
+
+
+
+
 <a name="0.2.5"></a>
 ## [0.2.5](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.2.4...@backmarket/modal@0.2.5) (2018-04-24)
 
