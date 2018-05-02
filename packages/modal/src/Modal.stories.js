@@ -50,7 +50,7 @@ storiesOf('Modal', module)
         <div style={styles}>
           <button onClick={() => this.$modals.show('first')}>Show modal</button>
 
-          <Modal name="first" size="small" closeLabel="Close" __dangerouslyRenderInPlace>
+          <Modal name="first" size="small" closeLabel="Close">
             {placeholder(h)}
             {placeholder(h)}
             {placeholder(h)}

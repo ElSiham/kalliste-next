@@ -31,6 +31,9 @@ $topbar-height: 3.4rem
   .Modal__Topbar--sticky ~ .Modal__Content
     padding-top: calc(#{$spacing} + #{$topbar-height})
 
+  &.Modal__Window--scrollable
+    margin: 5rem auto
+
   &.Animation--Window-enter-active,
   &.Animation--Window-leave-active
     transition: margin-top 0.3s
@@ -55,14 +58,16 @@ $topbar-height: 3.4rem
 .Modal
   overflow: scroll
   z-index: 50
+  -webkit-overflow-scrolling: touch
 
 .Modal__Backdrop
-  background: rgba($black, 0.4)
+  background: rgba($black, 0.8)
   z-index: 1
 
 .Modal__Window
   display: flex
   flex-direction: column
+  overflow: auto
   z-index: 2
 
 .Modal__Topbar
@@ -105,7 +110,6 @@ $topbar-height: 3.4rem
 
 .Modal__Window--scrollable
   position: relative
-  margin: 5rem auto
   transform: initial
   top: initial
   left: initial
