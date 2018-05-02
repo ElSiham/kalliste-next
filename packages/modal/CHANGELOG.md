@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.3.1...@backmarket/modal@0.3.2) (2018-05-02)
+
+
+### Bug Fixes
+
+* **modal:** Fix the apparition animation ([a6dd8dc](https://github.com/antoinerey/kalliste-next/commit/a6dd8dc))
+* **modal:** Fix the scroll on iOS ([7a7ed80](https://github.com/antoinerey/kalliste-next/commit/7a7ed80))
+
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/antoinerey/kalliste-next/compare/@backmarket/modal@0.3.0...@backmarket/modal@0.3.1) (2018-04-26)
 
