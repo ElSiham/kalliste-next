@@ -68,7 +68,7 @@ You will be asked the package name, and the scaffolding will be automated for yo
 
 Publishes every updated packages to git and npm.
 The changelogs will be automatically generated based on your commit messages, following
-[the conventional commits convention](https://conventionalcommits.org).
+[the conventional commits convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit).
 
 Publishing is restricted to the `master` branch. Trying to publish from somewhere else
 will fail and ask you to checkout.
